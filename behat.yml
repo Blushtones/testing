@@ -1,0 +1,19 @@
+default:
+  suites:
+    my_suite:
+      contexts:
+        - FeatureContext
+        - Drupal\DrupalExtension\Context\DrupalContext
+        # - Drupal\DrupalExtension\Context\MinkContext
+        #- Behat\MinkExtension\Context\MinkContext
+  extensions:
+    Behat\MinkExtension:
+      base_url:  'http://www.lamrt.org.uk'
+      sessions:
+        default:
+          goutte: ~
+    Drupal\DrupalExtension:
+      blackbox: ~
+      region_map:
+        my_content: "#block-views-block-incidents-block-1"
+        latest_news: "#block-views-block-news-block-1"
