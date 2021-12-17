@@ -24,4 +24,4 @@ When visiting the homepage
   @search
   Scenario: Find a button
     Given I am on the homepage
-    Then I should not see the "Search" button
+    Then I should see the "Search" button
