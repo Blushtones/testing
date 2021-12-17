@@ -17,7 +17,7 @@ default:
       region_map:
         my_content: "#block-views-block-incidents-block-1"
         latest_news: "#block-views-block-news-block-1"
-				# added regions
+        # added regions
         home_page_header: "#navbar"
         home_page_content: ".content"
         home_page_footer: ".footer"
