@@ -56,4 +56,25 @@ private function assetChecker($assetType, $assetSource, $assetCode){
     {
 			$this->assetChecker('a', 'href', $code);
   }
+  /**
+   * @Then I should see :arg2 :arg1 items
+   */
+  public function iShouldSeeItems($number, $area)
+  {
+		switch($area){
+			case "news":
+		   	$area_search = ".news";
+				break;
+			case "incident":
+		   	$area_search = ".incident";
+				break;
+			case "video":
+		   	$area_search = ".video-embed-field-provider-youtube";
+				break;		
+		}
+		$nodes =  $this->getSession()->getPage()->findAll('css', $area_search);
+		if ($number != count($nodes)){
+			throw new Exception("The number of " . $area . " items is " . count($nodes) . " and should be " . $number . ".");
+		}
+  }
 }
