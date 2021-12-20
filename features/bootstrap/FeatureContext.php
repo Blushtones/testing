@@ -55,5 +55,52 @@ private function assetChecker($assetType, $assetSource, $assetCode){
     public function theLinksShouldNotReturn($code)
     {
 			$this->assetChecker('a', 'href', $code);
-  }
+    }
+    
+    //ATTEMPT 1
+    //From: https://gist.github.com/acouch/9784746
+    // Leaflet icons don't have ids (at least the ones I'm using). Here we can click them by the z-index which is
+    // the only unique id.
+  
+    /**
+     * Click on map icon as identified by its z-index.
+     *
+     * @Given /^I click map icon with the title "([^"]*)"$/
+     */
+    public function iClickMapIcon($title) {
+        $session = $this->getSession();
+        $element = $session->getPage()->find(
+            'xpath',
+            $session->getSelectorsHandler()->selectorToXpath('xpath', '//img[@title="'.$title.'"]')
+
+        );
+        if (null === $element) {
+            throw new \InvalidArgumentException(sprintf('Cannot find map icon: "%s"', $title));
+        }
+        $element->click();
+    }
+    
+    
+    
+    //ATTEMPT 2
+    
+     /**
+    * Click on the element with the provided xpath query
+    *
+    * @When /^I click on the element with xpath "([^"]*)"$/
+    */
+   public function iClickOnTheElementWithXPath($xpath)
+   {
+       $session = $this->getSession(); // get the mink session
+       $element = $session->getPage()->find('xpath',$session->getSelectorsHandler()->selectorToXpath('xpath', $xpath)); // runs the actual query and returns the element
+
+       // errors must not pass silently
+       if (null === $element) {
+           throw new \InvalidArgumentException(sprintf('Could not evaluate XPath: "%s"', $xpath));
+       }
+
+       // ok, let's click on it
+       $element->click();
+
+   }
 }
