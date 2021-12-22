@@ -4,12 +4,12 @@ When visiting the homepage
   @header_menu
 	Scenario: I am  not logged on I should see the menu.
     Given I am on "/"
-    Then I should see "Home" in the "home_page_header" region
-		And I should see "Incidents" in the "home_page_header" region	
-		And I should see "News" in the "home_page_header" region
-		And I should see "Behind The Scenes" in the "home_page_header" region
-		And I should see "Safety" in the "home_page_header" region
-		And I should see "Support Us" in the "home_page_header" region
+    Then I should see "Home" in the "header" region
+		And I should see "Incidents" in the "header" region	
+		And I should see "News" in the "header" region
+		And I should see "Behind The Scenes" in the "header" region
+		And I should see "Safety" in the "header" region
+		And I should see "Support Us" in the "header" region
 
   @cookies_info
 	Scenario: I am  not logged on I should see a cookie infomation tab
@@ -25,7 +25,7 @@ When visiting the homepage
 	@intro
 	Scenario: I am  not logged on I should see the intro
   	Given I am on "/"
-		Then I should see "LAMRT" in the "home_page_content" region
+		Then I should see "LAMRT" in the "content" region
 
 	@you_tube
 	Scenario: I am  not logged on I can see the 4 youtube videos
