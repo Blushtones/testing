@@ -5,7 +5,7 @@ Feature:
   @javascript
   Scenario: I am  not logged on I should see a cookie infomation tab
     Given I am on "/incidents/map/2021"
-    Then I break
+    #Then I break
     And I click on the element with xpath "//img[@title='Incident Report #57 2021']"
-    Given I click map icon with the title "Incident Report #57 2021"
+    # Given I click map icon with the title "Incident Report #57 2021"
     Then I should see "Incident Report #57 2021"
