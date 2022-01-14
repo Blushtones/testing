@@ -55,7 +55,6 @@ private function assetChecker($assetType, $assetSource, $assetCode){
     public function theLinksShouldNotReturn($code)
     {
 			$this->assetChecker('a', 'href', $code);
-<<<<<<< HEAD
     }
     
     //ATTEMPT 1
@@ -104,8 +103,7 @@ private function assetChecker($assetType, $assetSource, $assetCode){
        $element->click();
 
    }
-=======
-  }
+
   /**
    * @Then I should see :arg2 :arg1 items
    */
@@ -127,5 +125,4 @@ private function assetChecker($assetType, $assetSource, $assetCode){
 			throw new Exception("The number of " . $area . " items is " . count($nodes) . " and should be " . $number . ".");
 		}
   }
->>>>>>> 271798b7c075f7b91c6df766a4bff8a569b01d4b
 }

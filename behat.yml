@@ -6,12 +6,18 @@ default:
         - Drupal\DrupalExtension\Context\DrupalContext
         # - Drupal\DrupalExtension\Context\MinkContext
         #- Behat\MinkExtension\Context\MinkContext
-  extensions:
-    Behat\MinkExtension:
-      base_url:  'http://www.lamrt.org.uk'
-      sessions:
-        default:
-          goutte: ~
+    
+    extensions:
+     Behat\MinkExtension:
+       base_url:  'http://www.lamrt.org.uk'
+       sessions:
+         default:
+           goutte: ~
+         javascript:
+           selenium2:
+             wd_host: http://selenium:4444/wd/hub
+             capabilities: {"browserName": "chrome", "browser": "chrome", 'chrome': {'switches': ['--disable-gpu', '--window-size=1280,1600']}, "marionette": true}
+    
     Drupal\DrupalExtension:
       blackbox: ~
       region_map:
