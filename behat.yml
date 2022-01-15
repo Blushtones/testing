@@ -12,6 +12,10 @@ default:
       sessions:
         default:
           goutte: ~
+        javascript:
+          selenium2:
+            wd_host: http://selenium:4444/wd/hub
+            capabilities: {"browserName": "chrome", "browser": "chrome", 'chrome': {'switches': ['--disable-gpu', '--window-size=1280,1600']}, "marionette": true}
     Drupal\DrupalExtension:
       blackbox: ~
       region_map:
