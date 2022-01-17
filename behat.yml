@@ -31,3 +31,5 @@ default:
         home_page_pre_footer: "#pre-footer"
         # All downloads in Drupal get their own field
         download: ".field--name-upload"
+        # Navigation Tabs
+        tabs: ".tabs"
