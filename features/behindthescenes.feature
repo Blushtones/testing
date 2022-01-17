@@ -21,11 +21,12 @@ When visiting the Behind The Scenes page
 	  | "/behindscenes" | "Behind The Scenes" | "Vehicles" | "/behindscenes/vehicles" |
 
 
-  # Scenario: The Join Us page has a membership form to download
-  #  Given I am on "/behindscenes/join-us"
-  #  
-  #  
-  #  
+  @download
+  Scenario: The Join Us page has a membership form to download
+    Given I am on "/behindscenes/join-us"
+    And I click "Membership Application Form (PDF)" 
+    Then the response status code should be 200
+   #Then the links should not return 404
  
   @finance
   Scenario: The Finances page has a link to the Virgin Money page that should work
