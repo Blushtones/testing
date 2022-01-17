@@ -16,7 +16,9 @@ Feature: Contact form
     And I fill in "subject[0][value]" with "Hello world"
     And I fill in "message[0][value]" with "Lorem Ipsum"
     And I press "Send message"
-    # Then I should see the text "Your message has been sent."
+    # Then I should be on "/" 
+    # And I should see the text "Your message has been sent."
+    ## This test is because the testing site fails to send email
     Then I should see the text "Unable to send email. Contact the site administrator if the problem persists."
     
   Scenario: A visitor can use the site-wide contact form to preview the message they will send
