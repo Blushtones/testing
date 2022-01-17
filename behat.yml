@@ -19,15 +19,15 @@ default:
     Drupal\DrupalExtension:
       blackbox: ~
       region_map:
-        my_content: "#block-views-block-incidents-block-1"
-        latest_news: "#block-views-block-news-block-1"
-        # added regions
-        home_page_header: "#navbar"
-        home_page_content: ".content"
-        home_page_footer: ".footer"
+        ## added regions
+        # all pages
+        header: "#navbar"
+        content: ".content"
+        footer: ".footer"
+        pre_footer: "#pre-footer"
+        # Home page 
         home_page_before_you_set_off: "#block-beforeyousetoff"
         home_page_incidents: "#block-views-block-incidents-block-1"
         home_page_news: "#block-views-block-news-block-1"
-        home_page_pre_footer: "#pre-footer"
         # All downloads in Drupal get their own field
         download: ".field--name-upload"
