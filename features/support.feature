@@ -27,7 +27,9 @@ When visiting the Support Us page
   Scenario: The Donate page should have a Gift Aid form I can download 
     Given I am on "/supportus/donate"
     Then I should see the link "Download a form" 
-    And I should see the link "Gift Aid Donation Form (PDF 36KB)" in the "download" region
+    And I click "Gift Aid Donation Form (PDF 36KB)" in the "download" region
+    Then the response status code should be 200
+    
     
   @buys
   Scenario Outline: The Donate page should have a What your money buys section with 6 items in it

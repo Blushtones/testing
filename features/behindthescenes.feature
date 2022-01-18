@@ -24,7 +24,7 @@ When visiting the Behind The Scenes page
   @download
   Scenario: The Join Us page has a membership form to download
     Given I am on "/behindscenes/join-us"
-    And I click "Membership Application Form (PDF)" 
+    And I click "Membership Application Form (PDF)" in the "download" region
     Then the response status code should be 200
    #Then the links should not return 404
  

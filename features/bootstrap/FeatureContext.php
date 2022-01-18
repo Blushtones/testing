@@ -119,6 +119,9 @@ private function assetChecker($assetType, $assetSource, $assetCode){
 			case "incident":
 		   	$area_search = ".incident";
 				break;
+      case "safety tip":
+		   	$area_search = ".safety-tip";
+				break;
 			case "video":
 		   	$area_search = ".video-embed-field-provider-youtube";
 				break;		
