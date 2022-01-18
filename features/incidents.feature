@@ -38,3 +38,38 @@ Feature:
     Then I should see "Incident Report #57 2021"
     And I follow "Incident Report #57 2021"
     Then I should be on "/incidents/2021/incident/57"
+
+  @javascript
+  @map
+  Scenario: I am not logged on I can see individual incidents pages with full detail
+    Given I am on "/incidents/2021/incident/81"
+    Then I should see a map with a marker on it
+
+
+  @links @individual-incident
+  Scenario Outline: I can get to all the sub pages from the main menu dropdown
+    Given I am on "/incidents/2021/incident/80"
+    Then I should see the link <named>
+
+	  
+	Examples:
+	  | named |
+	  | "Incident Report #78 2021" |
+	  | "Incident Report #79 2021" |
+    | "Incident Report #81 2021" |
+	  | "Incident Report #82 2021" |
+    | "Previous Incident" |
+    |  "Next Incident" |
+
+
+  @individual-incident
+  Scenario: I am not logged on I can see individual incidents pages with full detail
+    Given I am on "/incidents/2021/incident/81"
+      Then I should see 1 "safety tip" item
+      And I should see "Safety Tip"
+      And I should see "Man Hours"
+      And I should see "Incident Type"
+      And I should see "Location"
+      And I should see "OS Grid Reference"
+      And I should see "Unique Incident ID"
+      And I should see "Safety Tip"
