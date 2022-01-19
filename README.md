@@ -1,3 +1,30 @@
+add line to alias:
+	alias behat ='docker exec behat behat --colors "$@"'
+	restart or start a new terminal
+
+If webservice and testing are to be done on the same, host machine and once the dev enviroment is up and running:
+
+navigate to the docker-compose dir
+
+start development stack:
+	docker-compose -f ./docker-compose.testing.yml up -d
+
+find the ip address of the drupal continer:
+	docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' drupal
+
+amend the host file with the above ip address
+
+navigate to your testing folder and run behat:
+example:
+		behat --version
+		behat --tags @subsection
+
+vnc can be watched at http://localhost:7900
+
+to bring down the docker-compose
+  docker-compose -f ./docker-compose.testing.yml up -down
+
+
 # testing
 A repo for collecting tests
 
