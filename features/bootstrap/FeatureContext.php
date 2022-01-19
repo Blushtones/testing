@@ -26,7 +26,7 @@ class FeatureContext extends MinkContext implements Context
 
 private function assetChecker($assetType, $assetSource, $assetCode){
 			
-			
+			$page = $this->getSession()->getPage();
 			$assetElements = $this->getSession()->getPage()->findAll('css',$assetType);
 			foreach($assetElements as $asset){
 			  $assetUrl = ($asset->getAttribute($assetSource));
@@ -36,7 +36,7 @@ private function assetChecker($assetType, $assetSource, $assetCode){
 					$this->visit($assetUrl);
 					print($assetUrl . "\n");
 					$this->assertResponseStatusIsNot($assetCode);
-					$this->visit($base_url);
+					$this->getSession()->back();
 				}
 			}
 		}
