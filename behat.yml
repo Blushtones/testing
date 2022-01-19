@@ -5,7 +5,7 @@ default:
         - FeatureContext
         - Drupal\DrupalExtension\Context\DrupalContext
         # - Drupal\DrupalExtension\Context\MinkContext
-        #- Behat\MinkExtension\Context\MinkContext
+        # - Behat\MinkExtension\Context\MinkContext
   extensions:
     Behat\MinkExtension:
       base_url:  'http://www.lamrt.org.uk'
