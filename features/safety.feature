@@ -20,6 +20,7 @@ When visiting the Safety page
     Given I am on "/safety" 
     And I click "Planning a safe trip leaflet" in the "download" region
     Then the response status code should be 200
+    And I should be on "/sites/default/files/2019-08/lamrtstaysafe.pdf"
    #Then the links should not return 404
    
   

@@ -26,9 +26,16 @@ When visiting the Support Us page
   @download  
   Scenario: The Donate page should have a Gift Aid form I can download 
     Given I am on "/supportus/donate"
-    Then I should see the link "Download a form" 
     And I click "Gift Aid Donation Form (PDF 36KB)" in the "download" region
     Then the response status code should be 200
+    And I should be on "/sites/default/files/2020-03/LAMRT_Gift_Aid_donation_form_March_2020.pdf"
+    
+  @download  
+  Scenario: The Donate page should have a Gift Aid form I can download 
+    Given I am on "/supportus/donate"
+    And I click "Download a form" 
+    Then the response status code should be 200
+    And I should be on "/sites/default/files/2020-03/LAMRT_Gift_Aid_donation_form_March_2020.pdf"
     
     
   @buys

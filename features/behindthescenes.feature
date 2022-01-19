@@ -26,6 +26,7 @@ When visiting the Behind The Scenes page
     Given I am on "/behindscenes/join-us"
     And I click "Membership Application Form (PDF)" in the "download" region
     Then the response status code should be 200
+    And I should be on "/sites/default/files/Membership_application_form_2018-06-27.pdf"
    #Then the links should not return 404
  
   @finance
