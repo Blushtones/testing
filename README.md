@@ -9,6 +9,8 @@ navigate to the docker-compose dir
 start development stack:
 	docker-compose -f ./docker-compose.testing.yml up -d
 
+either run the create_hosts.sh script or create a host file manually
+
 find the ip address of the drupal continer:
 	docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' drupal
 
