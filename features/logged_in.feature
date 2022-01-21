@@ -5,7 +5,6 @@ Feature: Am I Logged In User
 	  Given "testuser" is logged on
 		Then I should see "testuser" 
 		
-	@javascript
 	@create_incident
   Scenario: As a logged on used I can create an incident
 	  Given "testuser" is logged on
