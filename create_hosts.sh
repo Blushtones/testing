@@ -17,7 +17,7 @@ read server_name
 ip_address=$(docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $server_name)
 
 #  Set localhost loop back
-echo -e '127.0.0.1\tlocalhost' > ./hosts
+echo -e '127.0.0.1\tlocalhost' > hosts
 
 x=1
 # iterate through the number of urls
@@ -27,7 +27,7 @@ do
   read web_url
 	
 	# Set the ip address for each of the urls to the webservice ip address
-	echo -e "${ip_address}\t${web_url}" >> ./hosts
+	echo -e "${ip_address}\t${web_url}" >> hosts
   x=$(( $x + 1 ))
 done
 
