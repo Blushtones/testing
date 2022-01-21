@@ -147,4 +147,15 @@ private function assetChecker($assetType, $assetSource, $assetCode){
 			throw new Exception("The number of " . $area . " items is " . count($nodes) . " and should be " . $number . ".");
 		}
   }
+  /**
+   * @Given :arg1 is logged on
+   */
+  public function isLoggedOn($arg1)
+  {
+      $this->visitPath('/user');
+      $this->getSession()->getPage()->fillField('Username', 'testuser');
+      $this->getSession()->getPage()->fillField('Password', 'testpassword123');
+      $this->getSession()->getPage()->pressButton('Log in');
+  }
+
 }
