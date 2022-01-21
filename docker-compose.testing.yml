@@ -1,0 +1,36 @@
+version: "2.1"
+
+services:
+  # Behat
+  behat:
+    hostname: behat
+    container_name: behat
+    image: docksal/behat
+    networks:
+      - devnet
+    volumes:
+      - .:/src
+      - ./hosts:/etc/hosts
+    # Run a built-in web server for access to HTML reports
+    ports:
+     - 8000:8000
+    entrypoint: "php -S 0.0.0.0:8000"
+
+  selenium:
+    image: selenium/standalone-chrome:4.1.1-20211217
+    container_name: selenium
+    networks:
+      - devnet
+    restart: always
+    volumes:
+      - ./hosts:/etc/hosts
+    ports:
+      - 4444:4444
+      - 7900:7900
+    shm_size: 2gb
+
+networks:
+  devnet:
+    external:
+      name: devnet
+
