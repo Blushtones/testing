@@ -17,11 +17,11 @@ When visiting the Support Us page
     
     
   @finance
-  Scenario: The Donate page has a link to the Virgin Money page that should work
+  Scenario: The Donate page has a link to an invest my community page that should work
     Given I am on "/supportus/donate"
-    When I follow "Virgin Money Giving"
-    Then I should be on "https://uk.virginmoneygiving.com/charity-web/charity/finalCharityHomepage.action?charityId=1016569"
-    And I should see "Langdale/ambleside Mountain Rescue Team"
+    When I follow "Sustainable Future of Langdale Ambleside Mountain Rescue Team (investmycommunity.com)"
+    Then I should be on "https://app.investmycommunity.com/fundraise/langdale-ambleside-mountain-rescue-team-2820"
+    And I should see "Sustainable Future of Langdale Ambleside Mountain Rescue Team"
     
   @download  
   Scenario: The Donate page should have a Gift Aid form I can download 
@@ -32,16 +32,15 @@ When visiting the Support Us page
     
     
   @buys
-  Scenario Outline: The Donate page should have a What your money buys section with 6 items in it
+  Scenario Outline: The Donate page should have a What your money buys section with 5 items in it
     Given I am on "/supportus/donate"
     Then I should see the heading "What your money buys..."
     And I should see <item>
     
     Examples:
     | item |
-    | "£500" |
+    | "£750" |
     | "£100" | 
     | "£1" |
-    | "£200" |
     | "£10" |
     | "£25" |

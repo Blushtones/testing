@@ -22,10 +22,9 @@ When visiting the Behind The Scenes page
 
 
   @download
-  Scenario: The Join Us page has a membership form to download
+  Scenario: The Join Us page has a link to a membership form
     Given I am on "/behindscenes/join-us"
-    And I click "Membership Application Form (PDF)" in the "download" region
-    Then the response status code should be 200
+    Then I should see the link "https://casualtycarebook.com/joinlamrt"
    #Then the links should not return 404
  
   @finance
