@@ -19,7 +19,8 @@ When visiting the Support Us page
   @finance
   Scenario: The Donate page has a link to an invest my community page that should work
     Given I am on "/supportus/donate"
-    When I follow "Sustainable Future of Langdale Ambleside Mountain Rescue Team (investmycommunity.com)"
+    Then I should not see "Virgin Money Giving"
+    When I follow "Sustainable Future of Langdale Ambleside Mountain Rescue Team (investmycommunity.com)" in the "content" region
     Then I should be on "https://app.investmycommunity.com/fundraise/langdale-ambleside-mountain-rescue-team-2820"
     And I should see "Sustainable Future of Langdale Ambleside Mountain Rescue Team"
     

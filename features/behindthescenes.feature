@@ -30,9 +30,10 @@ When visiting the Behind The Scenes page
   @finance
   Scenario: The Finances page has a link to the Virgin Money page that should work
     Given I am on "/behindscenes/finances"
-    When I follow "Virgin Money Giving"
-    Then I should be on "https://uk.virginmoneygiving.com/charity-web/charity/finalCharityHomepage.action?charityId=1016569"
-    And I should see "Langdale/ambleside Mountain Rescue Team"
+    Then I should not see "Virgin Money Giving"
+    When I follow "Sustainable Future of Langdale Ambleside Mountain Rescue Team (investmycommunity.com)" in the "content" region
+    Then I should be on "https://app.investmycommunity.com/fundraise/langdale-ambleside-mountain-rescue-team-2820"
+    And I should see "Sustainable Future of Langdale Ambleside Mountain Rescue Team"
     
   @vehicles
   Scenario Outline: The Vehicles page has info about 4 vehicles
