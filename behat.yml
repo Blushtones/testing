@@ -8,7 +8,7 @@ default:
         # - Behat\MinkExtension\Context\MinkContext
   extensions:
     Behat\MinkExtension:
-      base_url:  'http://www.lamrt.org.uk'
+      base_url:  'http://www.bees-ymca.org.uk'
       sessions:
         default:
           goutte: ~
@@ -19,7 +19,7 @@ default:
     Drupal\DrupalExtension:
       blackbox: ~
       drush:
-        root: /var/www/lamrt.org.uk
+        root: /var/www/bees-ymca.org.uk
         binary: 'vendor/bin/drush'
       region_map:
         ## added regions
