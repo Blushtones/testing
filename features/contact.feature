@@ -12,14 +12,16 @@ Feature: Contact form
     Given I am not logged in
     Given I am at "/contact"
     When I fill in "name" with "John Doe"
-    And I fill in "mail" with "john@doe.com"
+    And I fill in "mail" with "johnny@doe.com"
     And I fill in "subject[0][value]" with "Hello world"
     And I fill in "message[0][value]" with "Lorem Ipsum"
     And I press "Send message"
     # Then I should be on "/" 
     # And I should see the text "Your message has been sent."
     ## This test is because the testing site fails to send email
-    Then I should see the text "Unable to send email. Contact the site administrator if the problem persists."
+    Then I should see "Your message has been sent"
+    And I should not see the text "Unable to send email. Contact the site administrator if the problem persists."
+    And I should not see the text "You cannot send more than 5 messages in 1 hour. Try again later."
     
   Scenario: A visitor can use the site-wide contact form to preview the message they will send
     Given I am not logged in
