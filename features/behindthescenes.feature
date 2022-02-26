@@ -22,18 +22,18 @@ When visiting the Behind The Scenes page
 
 
   @download
-  Scenario: The Join Us page has a membership form to download
+  Scenario: The Join Us page has a link to a membership form
     Given I am on "/behindscenes/join-us"
-    And I click "Membership Application Form (PDF)" in the "download" region
-    Then the response status code should be 200
+    Then I should see the link "https://casualtycarebook.com/joinlamrt"
    #Then the links should not return 404
  
   @finance
   Scenario: The Finances page has a link to the Virgin Money page that should work
     Given I am on "/behindscenes/finances"
-    When I follow "Virgin Money Giving"
-    Then I should be on "https://uk.virginmoneygiving.com/charity-web/charity/finalCharityHomepage.action?charityId=1016569"
-    And I should see "Langdale/ambleside Mountain Rescue Team"
+    Then I should not see "Virgin Money Giving"
+    When I follow "Sustainable Future of Langdale Ambleside Mountain Rescue Team (investmycommunity.com)" in the "content" region
+    Then I should be on "https://app.investmycommunity.com/fundraise/langdale-ambleside-mountain-rescue-team-2820"
+    And I should see "Sustainable Future of Langdale Ambleside Mountain Rescue Team"
     
   @vehicles
   Scenario Outline: The Vehicles page has info about 4 vehicles

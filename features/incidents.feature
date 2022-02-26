@@ -2,6 +2,12 @@ Feature:
   There is a page of incident data with tabs for 3 different views of that data
   A list, a map and an advanced search
   
+  Scenario: I click on Incidents in the main nav and get to the incidents page
+    Given I am on the homepage
+    And I click 'Incidents'
+    Then I should be on "/incidents/2022"
+    And I should see the heading "Incident Reports 2022"
+  
   
   Scenario: I'm on the incidents page
     Given I am on "/incidents/2021"
