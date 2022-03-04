@@ -29,7 +29,7 @@ default:
         footer: ".footer"
         pre_footer: "#pre-footer"
         # Home page 
-        home_page_before_you_set_off: "#block-beforeyousetoff"
+        main_sections: "#block-views-block-frontpageblock-block-2"
         home_page_incidents: "#block-views-block-incidents-block-1"
         home_page_news: "#block-views-block-news-block-1"
         # All downloads in Drupal get their own field
