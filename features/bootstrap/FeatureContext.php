@@ -132,11 +132,11 @@ private function assetChecker($assetType, $assetSource, $assetCode){
       case "news card":
 		   	$area_search = ".card";
 				break;
-			case "incident":
-		   	$area_search = ".incident";
+			case "conservation-task":
+		   	$area_search = ".conservation-task";
 				break;
-      case "safety tip":
-		   	$area_search = ".safety-tip";
+      case "wildlife-field-visit":
+		   	$area_search = ".wildlife-field-visit";
 				break;
 			case "video":
 		   	$area_search = ".video-embed-field-provider-youtube";
