@@ -1,33 +1,35 @@
 Feature:
-  There is a top level places page
+  There is a top level projects page
   
-  Scenario: I click on Places in the main nav and get to the Places page
+  Scenario: I click on projects in the main nav and get to the projects page
     Given I am on the homepage
     And I click 'Projects'
     Then I should be on "/projects"
-    And I should see the heading "Projects"
-    
+    And I should see the heading "Projects
 
-  @javascript
-  @map
-  Scenario: I am not logged on and I visit an individual place page, I see a map
-    Given I am on "/places/reevymilldam"
-    Then I should see a map with a marker on it
-
-
-  @links
+  @menu
   Scenario Outline: I can get to all the sub pages from the main menu dropdown
-    Given I am on "/places"
-    Then I should see the link <named>
+    Given I am on <path>
+    When I follow <main-nav-item>
+    And I follow <sub-menu-item> in the "header" region
+    Then I should be on <new-path>
+    And I should see the heading <sub-menu-item> 
 
 	  
 	Examples:
-	  | named |    
-    | "BEES Urban Nature Reserve" |
-    | "Baildon Moor" |
-    | "Boar's Well Urban Wildlife Reserve" |
-    | "Bowling Park Community Orchard" |
-    | "Brackenhill Urban Landscape Area" |
-    | "Culture Fusion Meadow and gardens" |
-    | "Redcliffe Community Orchard" |
-    | "Reevy Mill Dam" |
+	  | path | main-nav-item |  sub-menu-item   | new-path |
+	  | "/projects" | "Projects" | "Apple Day" | "/projects/apple-day" |
+	  | "/projects" | "Projects" | "BEES 25th Anniversary" | "/projects/25th_anniversary" |
+	  | "/projects" | "Projects" | "Conservation Volunteers" | "/projects/conservation_volunteers" |
+	  | "/projects" | "Projects" | "Education Sessions and Visits" | "/projects/schools/education" |
+	  | "/projects" | "Projects" | "Habitat Heroes" | "/projects/schools/habitat-heroes"|
+	  | "/projects" | "Projects" | "Part of the landscape"  | "/projects/past" |
+	  | "/projects" | "Projects" | "Past Projects" | "/projects/past" |
+	  | "/projects" | "Projects" | "Ration Garden" | "/projects/vehicles" |
+    | "/projects" | "Projects" | "Schools Projects" | "/projects/schools" |
+    | "/projects" | "Projects" | "Shaping Spaces" | "/projects/shaping_spaces" |
+    | "/projects" | "Projects" | "Task Reports" | "/projects/conservation_volunteers/reports" | 
+    | "/projects" | "Projects" | "Wildlife Field Visits" | "/projects/fieldtrips" |
+    | "/projects" | "Projects" | "Wildlife Wanderers" | "/projects/wildlife-wanderers" |
+	  
+	

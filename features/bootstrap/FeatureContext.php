@@ -110,7 +110,7 @@ private function assetChecker($assetType, $assetSource, $assetCode){
     public function iShouldSeeAMapWithAMarkerOnIt()
     {
         $session = $this->getSession(); // get the mink session
-        $element = $session->getPage()->find('xpath',$session->getSelectorsHandler()->selectorToXpath('xpath','body/div[2]/div/div/section/div/article/div[2]/div[4]/div[2]/div/div[2]/div[1]/div[4]/img')); // runs the actual query and returns the element
+        $element = $session->getPage()->find('xpath',$session->getSelectorsHandler()->selectorToXpath('xpath',"//img[contains(@class, 'leaflet-marker-icon')]")); // runs the actual query and returns the element
 
        // errors must not pass silently
        if (null === $element) {
