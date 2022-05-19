@@ -23,9 +23,8 @@ Feature:
 	  | "/projects" | "Projects" | "Conservation Volunteers" | "/projects/conservation_volunteers" |
 	  | "/projects" | "Projects" | "Education Sessions and Visits" | "/projects/schools/education" |
 	  | "/projects" | "Projects" | "Habitat Heroes" | "/projects/schools/habitat-heroes"|
-	  | "/projects" | "Projects" | "Part of the landscape"  | "/projects/past" |
 	  | "/projects" | "Projects" | "Past Projects" | "/projects/past" |
-	  | "/projects" | "Projects" | "Ration Garden" | "/projects/vehicles" |
+	  | "/projects" | "Projects" | "Ration Garden" | "/projects/ration_garden" |
     | "/projects" | "Projects" | "Schools Projects" | "/projects/schools" |
     | "/projects" | "Projects" | "Shaping Spaces" | "/projects/shaping_spaces" |
     | "/projects" | "Projects" | "Task Reports" | "/projects/conservation_volunteers/reports" | 
