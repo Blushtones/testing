@@ -22,7 +22,7 @@ When visiting the homepage
     And I should see the link "Wildlife Field Visits" in the "main_sections" region
     And I should see the link "Places" in the "main_sections" region
     And I should see the link "Apple Day" in the "main_sections" region
-    And I should see the link "Education Sessions and visits" in the "main_sections" region
+    And I should see the link "Education Sessions and Visits" in the "main_sections" region
     And I should see the link "Schools Projects" in the "main_sections" region
     And I should see the link "BEES 25th Anniversary" in the "main_sections" region
     And I should see the link "Shaping Spaces" in the "main_sections" region
@@ -49,3 +49,11 @@ When visiting the homepage
   Scenario: I am not logged on I can see the search button
     Given I am on the homepage
     Then I should see the "Search" button
+    
+  @theme
+  Scenario: I am not logged on the layout of the main sections should be looking good
+    Given I am on the homepage
+    Then I should see the link "Conservation Volunteers" in the "main_sections" region
+    Then I should not see a ".media-body.views-field-title" element
+    Then I should see a ".pull-left" element
+
