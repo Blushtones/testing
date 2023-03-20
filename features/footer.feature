@@ -30,7 +30,7 @@ Feature:
 
 		And I should see "Please enter a valid email address."
 
-		And I should see "(c) 2023 HUE&CRY"
+		And I should see "© 2023 HUE&CRY"
 
 	@footer
 	Scenario: I am not logged on I should be able to follow links in the footer

@@ -32,7 +32,7 @@ When visiting the Fostering...page
 	@content
 	Scenario: I am not logged on I should see all the article text
   	Given I am on "/blog/re-incentivising-loyalty-with-rewards-and-more/"
-		Then I should see the heading "Re-establishing connections with consumers might simply mean incentivising them to recommit, whether that’s through discounts they can’t refuse or exclusive member perks. But getting loyalty schemes right can be a challenge – it’s always a balance of value for the consumer versus the brand."
+		Then I should see "Re-establishing connections with consumers might simply mean incentivising them to recommit, whether that’s through discounts they can’t refuse or exclusive member perks. But getting loyalty schemes right can be a challenge – it’s always a balance of value for the consumer versus the brand."
 		And I should see "At best, rewards programmes offer meaningful incentives for consumers to become lifelong customers of a particular brand. At worst, loyalty cards and apps sit in the forgotten corners of people’s smartphones and wallets, driving little value for the brand. So, what makes a loyalty scheme stand out? The answer lies in working out what delivers value for your consumers."
 
 	@highlights 
@@ -93,12 +93,14 @@ When visiting the Fostering...page
 		| exclusive access to an exhibition | Marriott Bonvoy offers exclusive access to Art Basel Hong Kong 2021 |
 		| Super Bowl Sleepover Contest | NFL Fans Can Spend The Night Inside The 2022 Super Bowl Stadium |
 		| ‘Summer Stimmy’ |Bud Light readies post-pandemic |
-		| ‘mana mobile tour’ mailto:| Top 10 spirits marketing moves in July |
-		| 90% of leisure and hospitality | Pulse Survey |
+		| ‘mana mobile tour’ | Top 10 spirits marketing moves in July |
+		#Direct to PDF
+		#| 90% of leisure and hospitality | Pulse Survey |
 		| 58% of consumers | 57% of consumers remained loyal to a brand during chaotic 2020 |
 		| partnered with Bakkt | Bakkt Partners with Wyndham Rewards to Expand Travel Offerings |
 		| 79% of consumers | New Consumer Study Shows Personalization Drives Brand Loyalty, but Brands Are Missing Opportunities to Engage |
-		| IHG Rewards Club | Five Hotel Loyalty Trends for 2020 |
+		#Direct to PDF
+		#| IHG Rewards Club | Five Hotel Loyalty Trends for 2020 |
 		| previous report | Elevating experiences with the power of 5G |
 		| Download the full report here. | / 34 |
 
