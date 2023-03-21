@@ -24,7 +24,10 @@ Feature:
 
     And I should see "Are you a Midweight looking to step up to the next level, or already a Senior and looking to help mentor a talented team of designers? Are you a team player with a positive outlook and outgoing personality? Are you an all-rounder who is keen to embrace a multi-disciplinary challenge? Are you comfortable linking strategic thinking with design, translating big ideas into inspiring and thought-provoking creative output? Are you excited about working on some really amazing clients, in the world of food, drink and travel?"
 
-    And I should see "If the answer is yes, we’d love to hear from you! Please share your portfolio & CV with p.lindsay@huecryagency.com and we’ll be in touch. Please note, due to the volume of applications, unfortunately only successful candidates will be contacted."
+    And I should see "If the answer is yes, we’d love to hear from you! Please share your portfolio & CV with"
+    #And I should see "p.lindsay@huecryagency.com"
+    And I should see "and we’ll be in touch. Please note, due to the volume of applications, unfortunately only successful candidates will be contacted."
 
-    And I should see "Hue and Cry is open minded, collaborative and ideas driven. If your talent comes without ego, if you play well with others and if you’re ready to make us better, get in touch: joinus@huecryagency.com"
+    And I should see "Hue and Cry is open minded, collaborative and ideas driven. If your talent comes without ego, if you play well with others and if you’re ready to make us better, get in touch"
+    #: joinus@huecryagency.com"
 

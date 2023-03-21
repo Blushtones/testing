@@ -28,7 +28,7 @@ Feature:
     And I should not see "Redefining brand education for the spirits category and beyond"
 
     And I should see "HENNESSY"
-    And I should see "Marketing Strategy, Brand Advocacy, Experiential Content, and Asset Production"
+    And I should see "Marketing Strategy, Brand Advocacy, Experiential, and Content and Asset Production"
     And I should not see "Marketing Strategy, Brand Advocacy, Experiential, Content and Asset Production"
 
     And I should see "Establishing the world’s most thoughtful villa rental company"
@@ -51,8 +51,9 @@ Feature:
     And I should see "Brand Strategy, Brand Visual Identity, and Point of Sale"
     And I should not see "Brand Strategy, Brand Visual Identity, Point of Sale"
 
-    And I should see "#BROOKLYNONTOUR"
-    And I should not see "Bringing the spirit of Brooklyn to the UK"
+    And I should not see "#BROOKLYNONTOUR"
+    And I should see "Brooklyn Brewery"
+    And I should see "Bringing the spirit of Brooklyn to the UK"
 
     And I should see "BROOKLYN"
     And I should see "Campaign Development, Experiential, Content and Asset Production, and Public Relations"

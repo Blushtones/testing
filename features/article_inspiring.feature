@@ -32,7 +32,7 @@ When visiting the Fostering...page
 	@content
 	Scenario: I am not logged on I should see all the article text
   	Given I am on "/blog/inspiring-brand-love-through-community/"
-		Then I should see the heading "Long-lasting consumer loyalty is built upon more than just great products and services."
+		Then I should see "Long-lasting consumer loyalty is built upon more than just great products and services." in the ".wp-block-post-excerpt__excerpt" element
 		And I should see "For brands to really form connections with consumers, they need to appeal to them as individuals on a deeper and more personal level"
 		And I should see "says Atkin. Indeed, building personal relationships is important to the majority of brands, with 57% of global business executives agreeing that forging emotional connections is the key goal of customer loyalty initiatives. In our hyper-connected world, there are more channels to establish these types of connections than ever before."
 		And I should see "Whether it’s leveraging the social clout of micro-influencers or leaning into online subcultures, developing a sense of community that extends beyond products and services can help brands drive loyalty and appeal to consumers on an emotional level."

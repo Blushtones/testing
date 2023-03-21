@@ -32,7 +32,7 @@ When visiting the Fostering...page
 	@content
 	Scenario: I am not logged on I should see all the article text
   	Given I am on "/blog/2022-trends-report/"
-		Then I should see the heading "Our latest Cause A Stir report is out now. We commissioned Canvas8 to produce the most extensive report on the key trends and consumer behaviours dominating 2022."
+		Then I should see "Our latest Cause A Stir report is out now. We commissioned Canvas8 to produce the most extensive report on the key trends and consumer behaviours dominating 2022." in the ".wp-block-post-excerpt__excerpt" element
 		And I should see "If you’re in the food, drinks, or travel industry you won’t want to miss it. Over the next series of articles we’ll take a deeper look into the individual trends for each industry but for now let’s delve into the overall trends that were uncovered."
 
 	@content
