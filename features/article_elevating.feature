@@ -32,7 +32,7 @@ When visiting the Harnessing ...page
 	@content
 	Scenario: I am not logged on I should see all the article text
   	Given I am on "/blog/elevating-experiences-with-the-power-of-5g/"
-		Then I should see "79% of global consumers say that the experience a company provides is as important as its products and services."
+		Then I should see "79% of global consumers say that the experience a company provides is as important as its products and services." in the ".wp-block-post-excerpt__excerpt" element
 
 		And I should see "DOWNLOAD THE FULL REPORT"
 
