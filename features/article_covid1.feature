@@ -14,61 +14,117 @@ When visiting the Harnessing ...page
   	Given I am on "/blog/covid-19-series-1/"
 		Then I should see "article"
 		And I should see "News"
-
-  @title 
+  
+  @title
 	Scenario: I am not logged on I should see the title and tag line
   	Given I am on "/blog/covid-19-series-1/"
-		Then I should see "Triumph in the new digital era"
-		And I should see "Deepening connections to consumers with new touchpoint"
+		Then I should see "Life after lockdown"
+		And I should see "How do brands reconnect with consumers in an adjusted world?"
 
 	@meta 
 	Scenario: I am not logged on I should see all the article details
   	Given I am on "/blog/covid-19-series-1/"
-		Then I should see "17 May 2021"
-		And I should not see "May 17 2021"
-		And I should see "5 minute read"
+		Then I should see "7 February 2020"
+		And I should not see "February 07 2020"
+		And I should see "7 minute read"
 		And I should see "SHARE"
 
-
-	@content
+@content
 	Scenario: I am not logged on I should see all the article text
   	Given I am on "/blog/covid-19-series-1/"
-		Then I should see "1% of UK consumers now prefer to interact with companies over digital channels rather than traditional ones."
+		Then I should see "Life under lockdown has caused a colossal change to people’s daily lives – it has hit pause on consumer lifestyles, led businesses to shut and caused the global economy to enter freefall. As restrictions ease, consumers will be tasked with reintegrating into a world that in many ways feels radically altered."
 
-
-
-
-	@content
-	Scenario: I am not logged on I should see all the article text
-  	Given I am on "/blog/covid-19-series-1/"
-		Then I should see the heading "DOWNLOAD THE FULL REPORT"
-		And I should see the link "DOWNLOAD THE FULL REPORT"
-		And I should see "“The coronavirus crisis set a new gold standard for online brand interactions,” says Hinssen. Throughout a year of restrictions, digital transformation became essential for brands across food, drink, and travel to remain relevant to consumers and survive. Looking ahead, people will have a renewed appetite for IRL experiences, yet the demand for online brand interactions is poised to stay – 41% of UK consumers now prefer to interact with companies over digital channels rather than traditional ones. Establishing dynamic digital touchpoints will become increasingly important for brands looking to expand their channels of access and carve new paths to product discovery."
+		And I should see "How can brands reconnect with consumers as we grapple with life in a new reality? And what are the opportunities for brands across food, drink and travel?"
 		
-		And I should see "DTC models foster deeper, one-to-one connections"
+		And I should see "People are seeking mini indulgences"
 		
-		And I should see "Amid the closure of bars, restaurants, and non-essential shops, 2020 emerged as a key year for DTC models, especially within the food and drink sectors. With 85% of its sales usually coming from pubs, bars, and restaurants, London-based craft brewery Beavertown pivoted to a direct-to-consumer model out of necessity – but the move saw the company’s sales increase by 1,000%."
+		And I should see "Research into the effects of long-term isolation has shown that people place more value and importance on small, routine pleasures, such as taking a bath or sharing a meal."
 		
-		And I should see "Switching to DTC may have been a survival strategy for many brands, but it’s clear that long-term expectations for this relationship of convenience will stick. Over half of UK consumers (58.4%) claim that buying direct from brands is quicker, while others are drawn to DTC models for the ease of search (57.4%) and cheaper products (32%). Additionally, by giving brands access to much richer data on their consumers, DTC allows brands to deepen their relationships and inspire brand loyalty via tailored customer experiences and subscription models. Take the launch of the Treasury Wine Estates DTC website as an example. In a bid to plug the gap left by dwindling on-trade sales, The Winery Collection (the DTC platform) enables wine drinkers to gain direct access to winemakers, as well as invites to exclusive wine clubs and virtual tastings."
-
-
+		And I should see "While a quarter of households in the UK say they are spending more time cooking together during lockdown, 40% are enjoying cooking more than before. These shifts in behaviour look to have a long-term impact too – 89% of Britons plan to continue making food from scratch once restrictions are lifted and only 9% want life to return to “normal” – highlighting a real appetite for change following a period of trying new things, and noticing positive differences, at home, in their work and in communities."
 		
+		And I should see "Having become accustomed to living with less in quarantine and now facing economic insecurity, people are questioning the excesses of their pre-quarantine lives, and as a result are likely to favour brands that help them to engage with the pleasures of the world around them, rather than distract them from it."
+		
+		And I should see "Only 9% of Britons want to return to “normal” life after the coronavirus outbreak is over."
+		
+		And I should see "Campaigns like IKEA’s January 2020 advert, The Wonderful Everyday, which celebrated life’s small victories and simple pleasures, are likely to resonate with consumers even more considering the post-pandemic context."
+		
+		And I should see "People are investing in future experiences"
+		
+		And I should see "25% of Britons have already booked a new flight or holiday for after the coronavirus pandemic and 58% of Americans are planning to travel before the end of the year."
+		
+		And I should see "Considering that 79% of Americans have engaged in retail therapy in the past, emotion-led purchasing is nothing new."
+		
+		And I should see "However, the idea of retail therapy is taking on new meaning, as people want to soothe the stress of constraints imposed in lockdown by planning ahead for happier times to come."
+		
+		And I should see "Indeed, academic research has revealed that the anticipation of an experience (such as a meal out or a holiday) can actually make people happier than the experience itself. For those who can afford to right now, many are investing in their future happiness – 25% of Britons have already booked a new flight or holiday for after the coronavirus pandemic and 58% of Americans are planning to travel before the end of the year."
+		
+		And I should see "People are also buying vouchers for restaurants either directly or through sites like Open Table that has set up dedicated gift card pages in both the UK and America, which not only provide a dining experience to look forward to, but help to ensure their favourite places to eat are able to reopen when quarantine measures are relaxed."
+		
+		
+		
+		And I should see "People want long-term, stable support"
+		
+		And I should see "The outbreak of COVID-19 saw a significant uptick in social engagement and community sentiment across the world. In the UK, for example, more than 750,000 people have signed up to become NHS volunteers and the country is taking to the streets every Thursday to applaud key workers as part of the #ClapForOurCarers initiative."
+		
+		And I should see "62% of people globally say their country will not make it through this crisis without brands playing a crucial role in addressing the challenges."
+		
+		And I should see "Brands are joining in too, with Channel 4 launching an ad break takeover to honour the different key workers pulling together to treat those affected by coronavirus."
+		
+		And I should see "As a result, 59% of Britons say the pandemic is bringing the country closer together and cultural psychologists predict the outbreak to endorse future societal collectivism in the US too."
+		
+		And I should see "It means people need the support of others – importantly brands. In fact, 62% of people globally say their country will not make it through this crisis without brands playing a crucial role in addressing the challenges. While the demand for immediate crisis responses has subsided, people want brands to help them reconstruct a sense of collective identity in a post-pandemic world."
+		
+		And I should see "Insights & Brand opportunities"
+		
+		And I should see "Safe space"
+		
+		And I should see "The rise of ‘staying in’ as the new ‘going out’ is something we identified in our previous report, but the outbreak of COVID-19 has taken the concept of staying in to new heights – alcohol sales in the US during the week ending 22 March 2020 were up 40% in value and 33% in volume compared to the same period in 2019."
+		
+		And I should see "Having lived through a period of forced abstinence from their usual lifestyles, people will have a renewed appreciation for experiences. But whether due to constraints set by the government or lasting effects of learned behaviours during lockdown, many people will still be wary of crowds and public spaces."
+		
+		And I should see "Services such as Dineindulge could allay people’s concerns around public spaces by sending private chefs to their homes to whip up a restaurant-worthy meal without the crowds. And for those who can’t wait to socialise but are cautious of frequenting busy bars, outlets such as London’s Artesian and New York’s Lincoln Ristorante are delivering cocktails in bulk for gatherings at home."
+		
+		And I should see "New digital experiences"
+		
+		And I should see "With technology being the only way to stay connected during lockdown, the crisis has also expedited digital-first habits."
+		
+		And I should see "Installations of Zoom’s mobile app have skyrocketed 728% since 2nd March, 2020 and a Globalwebindex study found over 4 in 10 people globally are interested in the prospect of live-streamed sports events and music concerts that have been postponed."
+		
+		And I should see "Luxury travel brand Belmond were quick to respond by creating “Belmond Invitations”, a virtual theatre of programmes designed to bring entertaining experiences into people’s homes whilst the world of travel is on pause. The platform launched on IGTV with a special performance from pianist Joe Stilgoe – in honour of the roaring 20s ‘The Party’ that was due to take place in Venice and on-board the Venice Simplon-Orient-Express"
+		
+		And I should see "Secret Cinema has also hosted its first ever Zoom party. 80s themed, hosted by actor Jackson and two DJs, it sold over 1,000 tickets at £5, with proceeds being used to raise money for the Trussell Trust, a nationwide poverty charity and food bank network. Following the success, it will be running an eight-week run of virtual screening experiences dubbed ‘Secret Sofa’, featuring bespoke content, character narratives and interactive elements inspired by the evening’s film."
+		
+		And I should see "Post-quarantine, people will expect digital versions of physical experiences as standard, offering an opportunity to enjoy live events in smaller groups in the comfort and safety of their home."
+		
+		And I should see "Crowded caution"
+		
+		And I should see "After months of restrictions, life post-quarantine is going to see a huge surge in appetite for live entertainment, travel and dining experiences."
+		
+		And I should see "The rise of ‘staying in’ as the new ‘going out’ is something we identified in our previous report, but the outbreak of COVID-19 has taken the concept of staying in to new heights – alcohol sales in the US during the week ending 22 March 2020 were up 40% in value and 33% in volume compared to the same period in 2019."
+		
+		And I should see "Going out for dinner is the number one activity Britons want to do post-quarantine."
+		
+		And I should see "Indeed, research from Lyvit has found that going out for dinner is top of the list for Britons post-quarantine. They’re likely to be looking to indulge in a drink too – research by McKinsey & Co found that 60% to 70% of people in China expected to consume the same amount or slightly more alcohol following the pandemic, compared to their pre-pandemic consumption."
+		
+		And I should see "But people will be approaching these experiences with trepidation. As a result, brands need to reframe their relationship with consumers in an environment where access doesn’t mean what it used to. For travel brands, there’s an opportunity to make the process of booking travel just as entertaining as the trip itself."
+		
+		And I should see "A prime example is the Four Seasons’s ‘Take The Leap‘ podcast, which inspires people to get in the mood to book a holiday, while luxury tour operator &Beyond is live-streaming safari experiences. As people cautiously repopulate bars and restaurants, they will want health concerns to be front-of-mind. Brut Eatery in Shanghai, for example, is attaching details of who cooked the meal and their body temperature to deliver peace of mind with every order. Likewise, travellers will want assurances around safety. Spain’s hotel association have announced plans for ‘Covid-19 Free’ certificates, Marriott has created a global cleanliness council and Accor has joined forces with the Bureau Veritas Group to develop a label to certify appropriate health and safety standards have been achieved. These initiatives aim to win back confidence by guaranteeing to both guests and staff, that hotels, restaurants and destinations are following strict hygiene protocols and are safe."
+		
+		And I should see "Build anticipation"
+		
+		And I should see "Months of restrictions have left people longing for the full restoration of their daily freedoms."
+		
+		And I should see "This explains why Kuoni has reported receiving ongoing queries about honeymoons, destination weddings and worldwide tours in 2021. For brands, there’s an opportunity to tap into this thirst for greater freedom in more innovative ways. For example, easyJet are offering luggage, and sports equipment to be added to flights for just 99p, aiming to reignite the travel industry post-pandemic whilst feeding peoples longing for travel and to explore the great outdoors."
+		
+		And I should see "Restaurants across the US are also selling merchandise, such as caps and T-shirts, to protect their business and allow people to showcase their love for the brand."
+		
+		And I should see "Brands have the opportunity to tap in to people’s thirst for greater freedom in innovative ways."
+		
+		And I should see "Visit Portugal released the advert ‘Can’t Skip Hope’, which highlights the need to put travel on pause during the outbreak, but points out that the wait will make trips and experiences that much sweeter."
 
-		And I should see "The future of content is user-led and participatory"
-		And I should see "As brands in food, drink, and travel increasingly lean into the sale of products and experiences online, user-generated content is playing an ever-more important role in boosting brand awareness and shaping paths to purchase, particularly among younger consumers. TikTok is a key illustration of this shift. There have been numerous instances of brands rising to fame almost overnight as the result of trends and challenges on the app. Ice cream brand Little Moons, for example, saw its sales rocket by 700% at Tesco after TikTok creators posted about its mochi ice cream. The majority of these viral TikTok moments occur organically, but brands have had some success by leaning into the grassroots appeal of the platform. Take M&S, for instance, which went viral after Craig, a manager from the Longbridge branch, enthusiastically demonstrated the store’s Scan & Shop feature."
 
-		And I should see "As the world of digital entertainment and retail increasingly collide, there’s scope for brands to forge new paths to product discovery and purchase via social channels. Hinssen points to the success of social shopping in China as an indicator of things to come elsewhere in the world. “As we’ve seen with the explosion of shoppable live streams in China, there’s great opportunity for brands who can establish a level of connectivity that allows people to observe an experience online and then take part in real life,” he says. This is something that Walmart is exploring in the US with a first-of-its-kind shoppable fashion live stream on TikTok. With food a formidable category on the platform, what’s to stop food brands from creating similar experiences that allow customers to taste the videos they watch online?"
 
-		And I should see "“As we’ve seen with the explosion of shoppable live streams in China, there’s great opportunity for brands who can establish a level of connectivity that allows people to observe an experience online and then take part in real life”"
-		And I should see "Peter Hinssen"
 
-		And I should see "Insights and opportunities"
-		And I should see "Open up new avenues of discovery"
-		And I should see "With digital channels playing a more prominent role in nurturing consumer relationships, brands need to ensure that they don’t always push the same products to the same people, while newcomers in this space need to find more innovative ways of getting noticed. “With algorithms increasingly controlling what we see online, it’s become harder to get input from outside of the echo chamber you are in, and the same could happen with brands,” says Hinssen. “If the intelligence around you says he really likes a latte from Starbucks, what are the chances that you’re going to break out of that bubble? What are the chances that an algorithm is going to say, ‘but why don’t you try something different?”"
-
-		And I should see "Against rising industry disruption and elevated consumer expectations, brands across food, drink, and travel may want to consider how they can meet consumers in new spaces and new ways. Partnerships provide a great opportunity, for example, in the UK, food content platform Mob Kitchen partnered with Just Eat to let customers get a selection of Mob Kitchen meals delivered to their door for the first time."
-
-		And I should see the link "Download the full report here."
 
 
   	@links
@@ -79,26 +135,55 @@ When visiting the Harnessing ...page
 
 	Examples:
 		| link | text |	
-		| DOWNLOAD THE FULL REPORT | / 35 |
-		| 41% of UK consumers | What Are Customer Expectations, and How Have They Changed?  |
-		| Beavertown | Beavertown Brewery enters DTC after Covid-19 wiped |
-		| Over half of UK consumers (58.4%) | Consumers open the door to DTC success in a post-pandemic world |
-		#Fails to load
-		#| The Winery Collection |  |
-		| 700% at Tesco | Mochi TikTok craze sees Little Moons sales rocket 700% at Tesco |
-		| enthusiastically demonstrated |  |
-		| first-of-its-kind shoppable fashion live stream on TikTok | Walmart enlists top TikTok creators for |
-		| a formidable category on the platform | TikTok Is the Food Platform of the People |
-		| Mob Kitchen partnered with Just Eat |Just Eat Are Bringing The Food Festival To Your Home With This Epic Veganuary Feast |
-		| Download the full report here. | / 35 |
+		| the effects of long-term isolation | |
+		| a quarter | |
+		| 9% want life to return to “normal” | |
+		| 79% of Americans | |
+		| academic research | |
+		| Open Table | |
+		| 750,000 people | |
+		| Channel 4 | |
+		| 59% of Britons | |
+		| cultural psychologists | |
+		| 62% of people | |
+		| Dineindulge | |
+		| Artesian | |
+		| Lincoln Ristorante | |
+		| 728% | |
+		| Globalwebindex study | |
+		| ‘Secret Sofa’ | |
+		#Broken link
+		#| Lyvit | |
+		| 60% | |
+		| Four Seasons’s ‘Take The Leap‘ podcast | |
+		| &Beyond | |
+		| Brut Eatery | |
+		| ‘Covid-19 Free’ certificates, Marriott has created a global cleanliness council | |
+		| a label | |
+		| Kuoni | |
+		| easyJet | |
+		| ‘Can’t Skip Hope’ | |
+
+
+
+
 
 
 
 	@highlights 
 	Scenario: I am not logged on I should see the highlights section
   	Given I am on "/blog/covid-19-series-1/"
-		Then I should see the heading "HIGHLIGHTS & TAKEAWAYS"
-		And I should see "When adopting DTC models it is essential brands leverage data gathered to obtain a clearer understanding of their consumers’ preferences and build hyper-tailored interactions."
-		And I should see "With more brand interactions taking place on social channels, leaning into user-generated content will help brands establish a sense of personality and gain clout with younger audiences. This can be supported by encouraging customers to capture content around their experiences and facilitating conversations around them."
-		And I should see "As the line between digital entertainment and online retail blurs, brands can leverage shoppable content to forge new paths to purchase online."
-		And I should see "Partnerships offer effective opportunities to target new audiences which when supported with data intelligence can be highly targeted to those who will be most receptive to messaging and offers."
+		Then I should see "In a Rush?"
+		And I should see "After a period of forced abstinence from consumer activities, people have a renewed appreciation for life’s simple pleasures. This creates the opportunity for brands to inject meaning into everyday experiences."
+		
+		And I should see "Demonstrating brand purpose, authenticity and quality will be even more important to ensure any ‘luxury’ purchases feel worthy of indulgence."
+		
+		And I should see "People are investing in future experiences to give them something to look forward to and assuage their frustrations about the current restrictions. Brands that are unable to operate under the current restrictions have the opportunity to build anticipation and secure consumer engagement by indulging in their desire to plan ahead."
+		
+		And I should see "The public health crisis has led to a surge in community values and collectivist sentiment, and people want to see brands playing an active role in stabilising and giving back to the community post-pandemic."
+		
+		And I should see "Having supported local and independent businesses people have a personal investment in, understanding the human side and motivation behind brands will be an even more important influence driving preference."
+		
+		And I should see "The pandemic has created greater expectations towards staying in and people will want brands to continue to cater to their at-home entertainment needs post-lockdown."
+		
+		And I should see "Re-entering public spaces in the post-pandemic period may be a source of concern and anxiety for many people, creating demand for brands that prioritise customer peace of mind through transparent hygiene measures or offer digital versions of physical events that can be enjoyed in the comfort and safety of home."

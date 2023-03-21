@@ -21,4 +21,4 @@ Feature:
     | /work/hennessy-nba/ | Hennessy X NBA |
     | /work/the-thinking-traveller/ | The Thinking Traveller  |
     | /work/the-lampery | The Lampery |
-    | /work/hennessy/ | Redefining brand education for the Spirit category and beyond |
+    | /work/hennessy/ | Hennessy |
