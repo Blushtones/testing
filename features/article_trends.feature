@@ -24,8 +24,8 @@ When visiting the Fostering...page
 	@meta 
 	Scenario: I am not logged on I should see all the article details
   	Given I am on "/blog/2022-trends-report/"
-		Then I should see "31 January 2022"
-		And I should not see "January 31 2022"
+		Then I should not see "31 January 2022"
+		And I should see "January 31 2022"
 		And I should see "3 minute read"
 		And I should see "SHARE"
 

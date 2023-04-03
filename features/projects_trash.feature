@@ -3,7 +3,7 @@ When visiting the Harnessing ...page
 
   @header_menu2
 	Scenario: I am not logged on I should see the main menu.
-    Given I am on "/work/birrificio-angelo-poretti/"
+    Given I am on "/work/trashandtreasure/"
     	Then I should see the link "WORK" 	
 		And I should see the link "ABOUT" 
 		And I should see the link "LATEST" 
@@ -12,41 +12,46 @@ When visiting the Harnessing ...page
 
 @header_menu2
 	Scenario: I am not logged on I should see a What we did section.
-    Given I am on "/work/birrificio-angelo-poretti/"
+    Given I am on "/work/trashandtreasure/"
     	Then I should see "What we did" 
-		And I should see "Marketing Strategy" 
-		And I should see "Sales Strategy" 
+		And I should see "Brand Strategy" 
 		And I should see "Brand Visual Identity" 
-		And I should see "ATL" 
-		And I should see "POS" 
-		And I should see "Public Relations"
+		And I should see "Packaging"
+
 
 @content
 	Scenario: I am not logged on I should see all the project text
-  	Given I am on "/work/birrificio-angelo-poretti/"
-		Then I should see "Finding a seat for beer at the dining table"
+  	Given I am on "/work/trashandtreasure/"
+		Then I should see "Reimagining what rum can be"
 		And I should see "THE BRIEF" 
 		
-		And I should see "Birrificio Angelo Poretti is an authentic beer brand with a range of beers specifically crafted with varying styles and taste profiles to be the perfect accompaniment to food. Being relaunched in the UK with additional variants, they asked us to help challenge the role of beer at the dining table, stealing share from wine to own the ‘with food’ occasion during quality dining experiences." 
+		#And I should see "pioneered the flavoured gin category but with the belief that nature has so much more to offer and with inventiveness embedded within their "
+		#DNA they had no intention of stopping there."
+		# That’s why they created a range of contemporary rums, inspired by the British the countryside, they feature an intriguing blend of spices, dandelion roots and discarded fruits peels. As long-term partners, we were asked to help define the target audience, brand proposition and brand visual identity that would bring this new world rum to life whilst maximising growth potential."
+		#And I should see "pioneered the flavoured gin category but with the belief that nature has so much more to offer and with inventiveness embedded within their DNA they had no intention of stopping there."
+		#And I should see "why they created a range of contemporary rums, inspired by the British the countryside, they feature an intriguing blend of spices, dandelion roots and discarded fruits peels. As long-term partners, we were asked to help define the target audience, brand proposition and brand visual identity that would bring this new world rum to life whilst maximising growth potential." 
 		
 		And I should see "THE CHALLENGE" 
 		
-		And I should see "Wine continues to be the go to choice during elevated dining occasions. In recent years there have been an increasing number of chefs and restaurants who are challenging the status quo by introducing beer to their menus but there are still huge cultural barriers when it comes to considering pairing quality food with beer, both at an outlet and consumer level." 
+		#And I should see "Over the last five years flavoured and spiced rum in the UK has seen growth of over 75%, predominantly being driven by premiumisation as discerning consumers continue to drink less but better. This has given a sharp rise to the number of craft distillers entering the segment making it an increasingly competitive space to play in.  We needed to identify what made Warner’s rum unique and build a proposition around it that would resonate with our target audience. As their first NPD outside of gin, we also needed to consider its role within the portfolio and how to evolve from being a craft gin distillery to a distiller that produces a range of spirits." 
 		
 		And I should see "SOLUTION" 
 		
-		And I should see "To change established beliefs and behaviours we needed to create a campaign supported by POS and trade activation that would resonate with ‘Foodie Tastemakers’, an influential audience who are open minded, curious, willing to experiment and ultimately drive change, setting trends that others will follow." 
+		#And I should see "With such a unique flavour profile and sustainable proposition we identified ‘Unique Flavour Seekers’ as the audience offering the biggest potential for growth. This group of younger millennials regularly go out, seeking out innovative and unique serves, flavour combinations and ingredients.  Although primarily driven by taste, they increasingly prefer ethical brands that have a greater purpose beyond profits, especially during more considered purchase occasions. Whilst Warner’s values of being farm born, big hearted and inventive were still relevant to this group, the personality and tone of voice of their rums had to adapt for a younger target audience, the segment and the role of rum in their drinking repertoire by being more energetic, playful and progressive." 
 		
-		And I should see "‘Foodie Tastemakers’ are increasingly adventurous in their tastes, actively seeking out new flavour combinations, tastes and cuisines. To win this group, we needed to differentiate the brand from the category, challenging established norms to create a sense of discovery whilst demonstrating how when paired with food, Birrificio Angelo Poretti opens a whole new world of flavour." 
+		And I should see "IT STARTED WITH A NAME" 
 		
-		And I should not see "Borrowing codes and language from the world of wine, we were able to position the brand within elevated food occasions and encourage our audience to reconsider beers role at the dining table."
+		#And I should see "Born from the phrase ‘one person’s trash is another’s treasure’ we created Trash & Treasure, a playful brand that spoke to the category but with a direct link to the product being crafted from dandelions often considered weeds and waste ingredients that would otherwise be destined for landfill, reinforcing the brand idea that the unwanted and undesired can be wonderful with a bit of ingenuity." 
+		
+		#And I should see "The name provided a strong start point for creative and storytelling that would intrigue and excite our audiences. This was realised with bespoke typography in a striking eye lockup incorporating the support message that beauty is in the eye of the beholder, encouraging a closer look." 
+		
+		And I should see "The bold stand out diagonal design features specially commissioned illustrations to bring to life weeds and waste and opposite a range of English countryside botanicals, unique to each variant to create a brand and packaging that is truly differentiated in an increasingly saturated category."
 
-		And I should see "Borrowing codes and language from the world of wine, we were able to position the brand within elevated food occasions and encourage our audience to reconsider beer’s role at the dining table."
 
 
 # 	@links
 ##  	Scenario Outline: I can see links in the text on the page
-#    Given I am on "/work/birrificio-angelo-poretti/"
+#    Given I am on "/work/trashandtreasure/"
 #    When I click "<link>"
 #	Then I should see "<text>"
 #

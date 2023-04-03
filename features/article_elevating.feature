@@ -24,8 +24,8 @@ When visiting the Harnessing ...page
 	@meta 
 	Scenario: I am not logged on I should see all the article details
   	Given I am on "/blog/elevating-experiences-with-the-power-of-5g/"
-		Then I should see "4 May 2021"
-		And I should not see "May 04 2021"
+		Then I should not see "4 May 2021"
+		And I should see "May 04 2021"
 		And I should see "5 minute read"
 		And I should see "SHARE"
 

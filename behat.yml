@@ -8,8 +8,8 @@ default:
         # - Behat\MinkExtension\Context\MinkContext
   extensions:
     Behat\MinkExtension:
-      #base_url:  'https://huecryagency.com/'
-      base_url:  'https://hca.cooperativeit.co.uk'
+      base_url:  'https://huecryagency.com/'
+      #base_url:  'https://hca.cooperativeit.co.uk'
       sessions:
         default:
           goutte: ~

@@ -99,11 +99,11 @@ Feature:
 
     And I should see "You may request to obtain and reuse your personal data for your own purposes across different services. This allows you to move, copy or transfer personal data easily from one IT environment to another in a safe and secure way, without hindrance to usability. The Right to Data Portability only applies:"
 
-    And I should see "1. To personal data you have provided to Hue & Cry Limited. 2. Where the processing is based on your consent or for the performance of a contract"
+    And I should see "1) To personal data you have provided to Hue & Cry Limited. 2) Where the processing is based on your consent or for the performance of a contract"
 
     And I should see "and"
 
-    And I should see "3. When processing is carried out by automated means."
+    And I should see "3) When processing is carried out by automated means."
 
     And I should see "In these circumstances Hue & Cry Limited will provide a copy of your data in CSV and/or PDF format free of charge within one month."
 

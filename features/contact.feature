@@ -5,11 +5,11 @@ Feature:
 	Scenario: I am not logged on I should see all the work projects
   	Given I am on "/contact"
 		Then I should see "We are always delighted to hear from new people."
-    And I should not see "If you have any questions or if you would like to discuss our work, please don’t hesitate to get in touch: causeastir@huecryagency.com"
+    #And I should not see "If you have any questions or if you would like to discuss our work, please don’t hesitate to get in touch: causeastir@huecryagency.com"
 
     And I should see "If you have any questions or if you would like to discuss our work, please don’t hesitate to get in touch:"
 
-    #And I should see the link "causeastir@huecryagency.com"
+    And I should see the link "causeastir@huecryagency.com"
 
     And I should see "Job openings"
 

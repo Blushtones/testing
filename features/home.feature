@@ -12,7 +12,9 @@ When visiting the homepage
   @cookies_info
 	Scenario: I am not logged on I should see a cookie information tab
   	Given I am on "/"
-		Then I should see "We use cookies on this site to enhance your user experience"
+		Then I should see the button "OK"
+		Then I should see "We use cookies to ensure that we give you the best experience on our website. If you continue to use this site we will assume that you are happy with it"
+		And I should see the button "OK"
 
   @assets
 	Scenario: I am not logged on I should see working images and links

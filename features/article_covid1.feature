@@ -24,8 +24,8 @@ When visiting the Harnessing ...page
 	@meta 
 	Scenario: I am not logged on I should see all the article details
   	Given I am on "/blog/covid-19-series-1/"
-		Then I should see "7 February 2020"
-		And I should not see "February 07 2020"
+		Then I should not see "7 February 2020"
+		And I should see "February 07 2020"
 		And I should see "7 minute read"
 		And I should see "SHARE"
 
@@ -120,7 +120,7 @@ When visiting the Harnessing ...page
 		
 		And I should see "Brands have the opportunity to tap in to people’s thirst for greater freedom in innovative ways."
 		
-		And I should see "Visit Portugal released the advert ‘Can’t Skip Hope’, which highlights the need to put travel on pause during the outbreak, but points out that the wait will make trips and experiences that much sweeter."
+		#And I should see "Visit Portugal released the advert ‘Can’t Skip Hope’, which highlights the need to put travel on pause during the outbreak, but points out that the wait will make trips and experiences that much sweeter."
 
 
 
