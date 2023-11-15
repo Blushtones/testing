@@ -8,7 +8,7 @@ default:
         # - Behat\MinkExtension\Context\MinkContext
   extensions:
     Behat\MinkExtension:
-      base_url:  'http://www.lamrt.org.uk'
+      base_url:  'https://candosouthyorkshire.org.uk/'
       sessions:
         default:
           goutte: ~
@@ -24,7 +24,7 @@ default:
       region_map:
         ## added regions
         # all pages
-        header: "#navbar"
+        header: ".wp-block-navigation"
         content: ".content"
         footer: ".footer"
         pre_footer: "#pre-footer"
@@ -36,3 +36,4 @@ default:
         download: ".field--name-upload"
         # Navigation Tabs
         tabs: ".tabs"
+    
