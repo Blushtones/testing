@@ -6,8 +6,8 @@ services:
     hostname: behat
     container_name: behat
     image: docksal/behat
-    networks:
-      - devnet
+    #networks:
+    #  - devnet
     volumes:
       - .:/src
       - ./hosts:/etc/hosts
@@ -19,8 +19,8 @@ services:
   selenium:
     image: selenium/standalone-chrome:4.1.1-20211217
     container_name: selenium
-    networks:
-      - devnet
+    #networks:
+    #  - devnet
     restart: always
     volumes:
       - ./hosts:/etc/hosts
@@ -29,8 +29,8 @@ services:
       - 7900:7900
     shm_size: 2gb
 
-networks:
-  devnet:
-    external:
-      name: devnet
+#networks:
+#  devnet:
+#    external:
+#      name: devnet
 

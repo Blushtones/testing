@@ -4,11 +4,13 @@ When visiting the homepage
   @header_menu
 	Scenario: I am not logged on I should see the main menu.
     Given I am on "/"
-    Then I should see the link "Actions" in the "header" region	
-		And I should see the link "Blog" in the "header" region
-		And I should see the link "Stories" in the "header" region
-		And I should see the link "Events" in the "header" region
-		And I should see the link "Directory" in the "header" region
+    Then I should see the link "Home" in the "navigation" region	
+		And I should see the link "Join" in the "navigation" region
+		And I should see the link "Meet" in the "navigation" region
+		And I should see the link "Help" in the "navigation" region
+		And I should see the link "People" in the "navigation" region
+
+
 
   @cookies_info
 	Scenario: I am not logged on I should see a cookie infomation tab

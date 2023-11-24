@@ -7,8 +7,9 @@ default:
         # - Drupal\DrupalExtension\Context\MinkContext
         # - Behat\MinkExtension\Context\MinkContext
   extensions:
+  #BEHAT_PARAMS='{"extensions" : {"Behat\\MinkExtension" : {"base_url" : "https://www.example.com/"}}}'
     Behat\MinkExtension:
-      base_url:  'https://candosouthyorkshire.org.uk/'
+      base_url:  'https://bingleymusictown.org.uk/'
       sessions:
         default:
           goutte: ~
@@ -24,6 +25,7 @@ default:
       region_map:
         ## added regions
         # all pages
+        navigation: "#navbarSupportedContent"
         header: ".wp-block-navigation"
         content: ".content"
         footer: ".footer"
@@ -36,4 +38,9 @@ default:
         download: ".field--name-upload"
         # Navigation Tabs
         tabs: ".tabs"
-    
+
+local:
+  extensions:
+    #BEHAT_PARAMS='{"extensions" : {"Behat\\MinkExtension" : {"base_url" : "https://www.example.com/"}}}'
+      Behat\MinkExtension:
+        base_url:  '127.0.0.1:4000'
