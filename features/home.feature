@@ -10,13 +10,6 @@ When visiting the homepage
 		And I should see the link "Help" in the "navigation" region
 		And I should see the link "People" in the "navigation" region
 
-
-
-  @cookies_info
-	Scenario: I am not logged on I should see a cookie infomation tab
-  	Given I am on "/"
-		Then I should see "We are using cookies to give you the best experience on our website."
-
   @assets
 	Scenario: I am not logged on I should see working images and links
   	Given I am on "/"
@@ -26,17 +19,29 @@ When visiting the homepage
 	@intro
 	Scenario: I am not logged on I should see the introductory text
   	Given I am on "/"
-		Then I should see "Together, we can tackle climate change"
-
-
+		Then I should see "Find about what’s on in Bingley during Music Month 2023 along with links to more live music and music making activities across the Bradford District."
 
  @footer_menu
 	Scenario: I am not logged on I should see the footer menu.
     Given I am on "/"
-    Then I should see the link "About Can Do South Yorkshire"
-    And I should see the link "Contact"
-    And I should see the link "Cookies"
-    And I should see the link "Privacy Policy"
+    Then I should see the link "Contact"
+    And I should see the link "Home"
+	And I should see the link "Join"
+	And I should see the link "Meet"
+	And I should see the link "Help"
+	And I should see the link "People"
+	And I should see the link "Music Groups"
+	And I should see the link "Music Month - November 2023"
+	And I should see the link "Regular Activities"
+	And I should see the link "Tuition"
+	And I should see the link "Instruments"
+	And I should see the link "Effects Library"
+	And I should see the link "Upcoming Events"
+	And I should see the link "Previous Events"
+	And I should see the link "Venues"
+	And I should see the link "Resources"
+	And I should see the link "Gallery"
+	And I should see the link "Contact"
 
  
   #@search
