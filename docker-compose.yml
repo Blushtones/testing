@@ -36,7 +36,7 @@ services:
       container_name: jekyll
       volumes:
           - $JEKYLL_FILE_PATH:/srv/jekyll
-          - $JEKYLL_FILE_PATH:/usr/local/bundle
+          - $JEKYLL_FILE_PATH/vendor/bundle:/usr/local/bundle
       ports:
           - 4000:4000
       command: jekyll serve
