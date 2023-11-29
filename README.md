@@ -1,24 +1,20 @@
-# Testing: Behat Tests
+# Testing
 
-This code will help you run Behat tests against a website. It was developed against a Drupal site, and the URL is hard coded.
+# Behat Tests for Jekyll
 
-Other tests for other sites exist as branches of this repo.
+This repository contains code to help you test a local Jekyll site with Behat. You can also run the same tests against a website hosted on the web.
 
-Two such sites are:
-* lamrt.org.uk (main branch)
-* bees-ymca.org.uk
+Behat is set up and run from inside a Docker container.
 
-There are a couple of places where you could make changes in this code to fit the site you are working on. See below.
-
-You can run these tests against:
-* another docker container on the same machine
+You can run the same set of tests against:
+* a Jekyll instance (also run within a docker container) on the same machine
 * a site on a remote server
 
-# Usage
+## Get Started
 
 Clone this repo
   
-    git clone git@github.com:Blushtones/testing.git 
+    git clone git@github.com:CooperativeIT/testing.git
 
 Move into the testing directory
    
@@ -30,61 +26,37 @@ We are going to edit some files so you may want to create your own branch at thi
 
 If you are working a different site to one of the existing branches you almost certainly want to create a new branch
 
-## Another docker container on the same machine
+## Configuration
 
-### Choose and set up docker-compose
-You will use `docker-compose.testing.yml` **BUT** you might need to change the network.
+### .env
+Create a .env file and populate it with the path to you Jekyll files
 
-**NB** This is setup to use the arbitarily chosen `devnet` network. You may need to change this to match the network of the containers that your site is running in. (e.g. docker-compose_default)
+    cp example.env .env
+    nano .env
 
-### Set up the routes to the site
-You use `create_hosts.sh` to make help connect the site to be tested to the tests themselves. You're make a local hosts file to direct the traffic.
+### behat.yml
 
-**Either** run the `create_hosts.sh` script **OR** create a hosts file manually. 
+You may need to edit `behat.yml`. This contains the URL of the site you are testing. 
 
-#### EITHER run the script:
-  
-    ./create_hosts.sh
+**NB** You only need to update the default -> Extensions -> base_url setting. (i.e. don't alter the local .. base_url setting)
 
-#### OR create a hosts file manually:
-1. Find the ip address of the drupal container running the website (we assume it is called 'drupal'): 
-  
-        docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' drupal
-
-2. Amend/ Create the hosts file as follows and save to the testing root directory (**NB** ip and url need to be tab separated)
-
-       127.0.0.1  localhost
-       < above ip address > < url > 
-
-### Check behat is configured
-
-You may need to edit `behat.yml`. This contains the URL of the site you are testing.
-
-## A site on a remote server
-
-You can test a site that is live in the wild
-
-### Use the correct docker-compose file
-
-You will use `docker-compose.live.testing.yml`
-
-No other changes are needed here.
-
-You will NOT use `create_hosts.sh`
-
-### Configure behat.yml
-
-You may need to edit `behat.yml` to set the remote URL you are targetting.
-
-**NB** the main branch of this repo tests on http which may not work on a live site.
+**NB** The http or https protocol must be in the URL
 
 ## Start the testing stack: 
 
-    docker-compose -f ./<docker-compose file> up -d
+    docker-compose up -d
 
-You are now ready to run the tests
+You are now ready to run the tests.
+
+We have created a network for the 3 containers (behat, selenium, jekyll), and assigned IP Addresses to each so that the local testing can find the Jekyll site.
 
 ##  Run the tests 
+
+By default the tests will run against a site live on the web as configured in `behat.yml`.
+
+To run against a local development site use the `profile` flag:
+ 
+    --profile=local 
 
 ### Optional: Set up a bash alias
 
@@ -96,14 +68,27 @@ Either reload terminal session or refresh session to make the alias permanent ac
 
 ### Examples: 
 **NB** the examples assume you have set up an alias (see above)
+    
+    # Get version information
+    behat --version 
 
-    behat --version ## Get version information
-    behat ## Runs all available tests
-    behat --tags @subsection  ##runs all tests tagged 'subsection'
-    behat --tags @javascript  ##runs all tests tagged 'javascript' with a javascript enabled browser
+    # Run all available tests against a live site
+    behat 
+
+    # Run all available tests against a local development site
+    behat --profile=local 
 
 
-### Watch the tests 
+#### Partial tests
+
+    # Run all tests tagged 'subsection'
+    behat --tags @subsection  
+
+    # Run all tests tagged 'javascript' with a javascript enabled browser
+    behat --tags @javascript  
+
+
+## Watch the tests 
 
 You can launch a vnc browser instance in Chrome/Chromium to watch Selenium tests at
 
@@ -111,9 +96,7 @@ You can launch a vnc browser instance in Chrome/Chromium to watch Selenium tests
 
 ## Bring down the testing stack 
 
-      docker-compose -f ./<docker-compose file> down
-
-
+      docker-compose down
 
 
 ## Behat Notes
@@ -133,3 +116,21 @@ We should be able to use 'tags' to connect tests across .feature files or to sep
 ### Issues
 
 I'll create issues for us to work from...
+
+
+Other notes
+It was developed against a Drupal site, and the URL is hard coded.
+
+ a 'live' website AND against a site in another local docker container.
+
+
+
+Other tests for other sites exist as branches of this repo.
+
+Two such sites are:
+* lamrt.org.uk (main branch)
+* bees-ymca.org.uk
+
+There are a couple of places where you could make changes in this code to fit the site you are working on. See below.
+
+You can run these tests against:
